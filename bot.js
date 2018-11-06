@@ -30,7 +30,7 @@ client.on('ready', () => {
 
 
 const adminprefix = "a";
-const devs = ['501074813704470543'];
+const devs = ['460606140666085378'];
 client.on('message', message => {//for dev
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
@@ -48,9 +48,9 @@ return message.reply("**من فضلك يجب عليك الانتظآر لمدة 
 client.user.setAvatar(argresult);
   message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
       } else
-if (message.content.startsWith(adminprefix + 'rther')) {
+if (message.content.startsWith(adminprefix + '7')) {
   client.user.setGame(argresult, "https://www.twitch.tv/faresgameryt");
-    message.channel.sendMessage(`**Streaming          "``${argresult}``"**`)
+    message.channel.sendMessage(`**Streaming          "${argresult}"**`)
 }
 
 
