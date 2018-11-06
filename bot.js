@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(` Ltt `,"http://twitch.tv/S-F")
+//client.user.setGame(` Ltt `,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -29,6 +29,32 @@ client.user.setGame(` Ltt `,"http://twitch.tv/S-F")
 });
 
 
+const adminprefix = "a";
+const devs = ['ايدي حسابك الاول' , 'ايدي حسابك الثاني' , 'ايدي حسابك الثالث'];
+client.on('message', message => {//for dev
+  var argresult = message.content.split(` `).slice(1).join(' ');
+    if (!devs.includes(message.author.id)) return;
+
+if (message.content.startsWith(adminprefix + 'setgwdwdwdame')) {
+  client.user.setGame(argresult);
+    message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
+} else
+  if (message.content.startsWith(adminprefix + 'setnwdwdwdwame')) {
+client.user.setUsername(argresult).then
+    message.channel.sendMessage(`**${argresult}** : تم تغيير أسم البوت إلى`)
+return message.reply("**من فضلك يجب عليك الانتظآر لمدة ساعتين ومن ثم قم بتغيير الأسم..!**");
+} else
+  if (message.content.startsWith(adminprefix + 'setavwdwdwatar')) {
+client.user.setAvatar(argresult);
+  message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
+      } else
+if (message.content.startsWith(adminprefix + 'rther')) {
+  client.user.setGame(argresult, "https://www.twitch.tv/faresgameryt");
+    message.channel.sendMessage(`*now 'Streaming' ->  ${argresult}**`)
+}
+
+
+    });
 
 
 client.login(process.env.BOT_TOKEN);
