@@ -50,7 +50,7 @@ client.user.setAvatar(argresult);
       } else
 if (message.content.startsWith(adminprefix + 'rther')) {
   client.user.setGame(argresult, "https://www.twitch.tv/faresgameryt");
-    message.channel.sendMessage(`**now 'Streaming' ->  ${argresult}**`)
+    message.channel.sendMessage(`**Streaming          "``${argresult}``"**`)
 }
 
 
