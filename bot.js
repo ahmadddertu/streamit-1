@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`آحيانا يكفي أن نعرف انهم بخير لا أكثر.,`,"http://twitch.tv/S-F")
+client.user.setGame(`✖ Crew, coming soon beginning 2019 ⏳ 🔥`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
